@@ -11,16 +11,16 @@
 // This is a static nav that will be shared across pages - so all code is contained within this file.
 const navigationItems = [
   { title: "Home", href: "/index.html" },
-  { title: "The State Capital", href: "/top-10-cities/springfield.html" },
-  { title: "Top 10 Cities", href: "/top-10-cities/index.html", dropdown: true,
+  { title: "The State Capital", href: "/illinois-prototype/top-10-cities/springfield.html" },
+  { title: "Top 10 Cities", href: "/illinois-prototype/top-10-cities/index.html", dropdown: true,
     children: [
-      { title: "1. Chicago (click me)", href: "/top-10-cities/chicago.html" },
+      { title: "1. Chicago (click me)", href: "/illinois-prototype/top-10-cities/chicago.html" },
       { title: "2. Aurora", className: "unavailable", href: "#" },
       { title: "3. Joliet", className: "unavailable", href: "#" },
-      { title: "4. Naperville (click me)", href: "/top-10-cities/naperville.html" },
+      { title: "4. Naperville (click me)", href: "/illinois-prototype/top-10-cities/naperville.html" },
       { title: "5. Rockford", className: "unavailable", href: "#" },
       { title: "6. Elgin", className: "unavailable", href: "#" },
-      { title: "7. Springfield (click me)", href: "/top-10-cities/springfield.html" },
+      { title: "7. Springfield (click me)", href: "/illinois-prototype/top-10-cities/springfield.html" },
       { title: "8. Peoria", className: "unavailable", href: "#" },
       { title: "9. Waukegan", className: "unavailable", href: "#" },
       { title: "10. Champaign", className: "unavailable", href: "#" }
