@@ -5,7 +5,7 @@ const currentPageID = document.body.getAttribute('id');
 async function fetchDataAndBuildUI() {
   try {
     // Make a call to a data source or endpoint to fetch the data. In this case it's mocked up local data.
-    const response = await fetch('/scripts/data.json'); 
+    const response = await fetch('/illinois-prototype/scripts/data.json'); 
     const data = await response.json();
     const stateData = data.illinois;
 
