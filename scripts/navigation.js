@@ -10,7 +10,7 @@
 // ----- 1. Define navigation and subnav in JSON as an array of objects with possible child objects for easier manipulation and better readability.
 // This is a static nav that will be shared across pages - so all code is contained within this file.
 const navigationItems = [
-  { title: "Home", href: "/index.html" },
+  { title: "Home", href: "/illinois-prototype/index.html" },
   { title: "The State Capital", href: "/illinois-prototype/top-10-cities/springfield.html" },
   { title: "Top 10 Cities", href: "/illinois-prototype/top-10-cities/index.html", dropdown: true,
     children: [
@@ -26,8 +26,8 @@ const navigationItems = [
       { title: "10. Champaign", className: "unavailable", href: "#" }
     ]
   },
-  { title: "Events and Things To Do!", href: "/events.html" },
-  { title: "Citations and Resources", href: "/citations.html" }
+  { title: "Events and Things To Do!", href: "/illinois-prototype/events.html" },
+  { title: "Citations and Resources", href: "/illinois-prototype/citations.html" }
 ];
 
 

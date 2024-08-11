@@ -176,7 +176,7 @@ main {
   display: inline-block;
   padding: 10px 10px 10px 75px;
   background-color: transparent;
-  background-image: url(../img/Flag_of_Illinois.svg);
+  background-image: url(/illinois-prototype/img/Flag_of_Illinois.svg);
   background-repeat: no-repeat;
   background-position: -20px;
   background-size: 30%;
@@ -294,11 +294,11 @@ nav ul li:hover>ul {
 /*------ header hero ------*/
 
 #illinois .hero-graphic {
-  background-image: url('../img/illinois-charles-mound-scenic-illinois.jpg');
+  background-image: url('/illinois-prototype/img/illinois-charles-mound-scenic-illinois.jpg');
 }
 
 #events-and-todo .hero-graphic {
-  background-image: url('/img/music-festival-1.jpg');
+  background-image: url('/illinois-prototype/img/music-festival-1.jpg');
 }
 
 .hero-graphic {
