@@ -1,0 +1,322 @@
+<!-- Make sure the browser reads the code as HTML5 -->
+<!DOCTYPE html>
+<!-- Set the primary language of this html document as US English -->
+<html lang="en-US">
+
+<head>
+<!-- Use character encoding "UTF-8" - a variable width standard that translates the Unicode characters into 8-bit -->
+<meta charset="utf-8">
+<!-- Make sure IE uses the latest render engine-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--Provide a description of your wepage for SEO and to display in search results-->
+<meta name="description" content="">
+<!-- Set the width of the viewport to the width of the device's screen to assist with responsive design; and set the initial zoom level when the page first loads to 100%-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Springfield, Illinois - "Flower City"</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Fauna+One:wght@400;700&display=swap">
+<link rel="stylesheet" href="../styles/styles.css">
+
+<style>
+  /* PAGE LOAD STYLES */
+</style>
+
+</head>
+
+<body id="springfield">
+  <!------ HEADER AREA ------>
+  <div id="header-container" class="container-fluid bg-white">
+    <div class="row">
+      <div class="col-12 g-0">
+        <header>
+
+        <!------ LOGO AND LOGIIN BAR ------>
+        <div class="header-login-bar">
+            <div class="justify-left">
+              <span class="title">The State of Illinois</span>
+            </div>
+            <div class="user-info justify-right">
+              <span class="welcome-text">Welcome Back, John Doe!</span>
+              <div class="profile-dropdown">
+                <img src="../img/user.png" alt="Profile" class="profile-picture">
+                <span>&#9660;</span>
+                <div class="dropdown-content">
+                  <a href="#" class="dropdown-item">Profile</a>
+                  <a href="#" class="dropdown-item">Settings</a>
+                  <a href="#" class="dropdown-item">Logout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!------ MAIN NAVIGATION ------>
+          <div id="nav-container" class="container-fluid">
+            <div class="row">
+              <div class="col-12 g-0">
+                  <nav class="navbar navbar-expand-md navbar-light bg-white">
+                    <div class="container-fluid">
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse justify-content-left" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+              </div>  
+            </div>
+          </div>
+
+          <!------ HERO IMAGE WITH TEXT OVERLAY ------>
+          <div id="hero-section" class="hero-graphic text-left bg-dark text-white">
+            <div class="hero-text rounded-4">
+              <div class="hero-flag"><img src="/img/Flag_of_Springfield,_Illinois_(no_text).svg" alt="Flag of Springfied, Illinois" /></div>
+              <h1 id="cityName" class="hero-heading">City Name</h1>
+              <h2 id="nickname">Nickname</h2>
+              <p id="hero-soundbite"></p><a src="#" class="cta-btn">Plan a Vist</a>
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+  </div>
+
+
+<!------ BREADCRUMB NAVIGATION ------>
+<div class="breadcrumb-container container-fluid">
+  <div class="row">
+    <div class="col-12 g-0">
+      <div class="breadcrumb-nav bg-white"> <!-- REFACTOR -->
+        <!-- <div aria-label="breadcrumb"> -->
+          <ol class="breadcrumb p-3">
+            <li class="breadcrumb-item">
+              <a class="link-body-emphasis fw-bold" href="/index.html">
+                <span class=""><i class="bi bi-house-fill"></i> The State of Illinois</span>
+              </a>
+            </li>
+            <li class="breadcrumb-item fw-semibold active" aria-current="page">
+              <span class="current-location">Top 10 Cities - The State Capitol: Springfield</span>
+            </li>
+          </ol>
+        <!-- </div> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!------ MAIN CONTENT AREA ------>
+<div id="main-container"  class="container-xxl">
+  <div class="row">
+    <div class="col-md-8">
+      <main>
+
+        <!------ Data Table ------->
+        <section id="location-data">
+          <h2>How <span class="current-location">Springfield</span> Compares to <span class="current-location-parent">Illinois</span></h2>
+          <!-- Demographics Comparison Table (responsive table) -->
+          <div class="row location-data-table" id="cityDataTable">
+            <div class="col-md-12">
+              <table aria-describedby="tableInfo">
+                  <caption id="tableCaption">A comparison table of the difference in various demographics between <span class="current-location">Springfield</span> and the rest of <span class="current-location-parent">Illinois</span></caption>
+                  <p id="tableInfo" hidden>The demographics column contains the following data categories: population, date of incorporation, region, classification, median household income, median rent, and median home value. The footer contains the overall cost of living difference between <span class="current-location">Springfield</span> and the rest of <span class="current-location-parent">Illinois</span>.</p>
+                <thead>
+                  <tr>
+                    <th scope="col">Demograpics</th>
+                    <th scope="col"><span class="current-location">Springfield</span></th>
+                    <th scope="col">Comparison to State</th>
+                  </tr>
+                </thead>
+                <tbody id="cityDataBody">
+                  <!-- build table cells with dynamic data -->
+                </tbody>
+                <tfoot><td colspan="3"><strong>Cost of Living Difference:</strong> <span class="current-location">Springfield</span> is 15.4% lower than the rest of <span class="current-location-parent">Illinois</span>.</td></tfoot>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!------ History Section ------->
+        <section id="history" class="content-card">
+          <div class="row">
+            <h2>History of <span class="current-location">Springfield</span></h2>
+            <div class="col-12 col-md-6">
+              <figure>
+                <img src="/img/835px-Thomas_Hicks_-_Leopold_Grozelier_-_Presidential_Candidate_Abraham_Lincoln_1860_-_cropped_to_lithographic_plate.jpg" alt="lithographer Print showing Abraham Lincoln, head-and-shoulders portrait, facing right">
+                <figcaption>Hon. Abraham Lincoln, Republican candidate for the presidency, 1860. Thomas Hicks painted a portrait of Lincoln at his office in Springfield specifically for this lithograph</figcaption>
+              </figure>
+            </div>            
+          <div class="col-12 col-md-6">
+              
+            <p><strong>Springfield, Illinois, steeped in rich American history, serves as the state capital and has played a pivotal role since its founding in the early 19th century.</strong>  The city is indelibly linked to Abraham Lincoln, who lived here from 1837 until his presidency in 1861, and it's home to a wealth of historical sites connected to his legacy. </p>
+            <a href="#" class="secondary-cta-btn">Read more about Springfield's History</a>
+            </div>
+          </div>
+        </section>
+
+        <!------ Culture Section ------->
+        <section id="culture" class="content-card">
+          <div class="row">
+            <h2><span class="current-location">Springfield</span> Culture</h2>
+            <div class="col-12 col-md-6">
+              <figure>
+                <img src="/img/1442px-Illinois_State_Capitol_at_sunset.jpg" alt="A description of the image">
+                <figcaption>This is the caption of the image.</figcaption>
+              </figure>
+            </div>
+            <div class="col-12 col-md-6">
+              <p><strong>Cultural life in Springfield is vibrant, with an emphasis on history and the arts.</strong>The Abraham Lincoln Presidential Library and Museum, along with numerous historic sites, theaters, and art galleries, enriches the cultural fabric of the city, reflecting a deep appreciation for the past and present.</p>
+              <a href="#" class="secondary-cta-btn">Read more about <span class="current-location">Springfield</span>'s Culture</a>
+            </div>
+          </div>
+        </section>
+        
+        <!------ Economy Section ------->
+        <section id="economy" class="content-card">
+          <div class="row">
+            <h2>The <span class="current-location">Springfield</span> Economy</h2>
+            <div class="col-12 col-md-6">
+              <figure>
+                <img src="/img/1361px-Illinois_-_Springfield_-_NARA_-_23939955_(cropped).jpg" alt="A description of the image">
+                <figcaption>This is the caption of the image.</figcaption>
+              </figure>
+            </div>
+            <div class="col-12 col-md-6">
+              <p><strong>Springfield's economy is anchored by the state government, healthcare, education, and tourism,</strong> with the presence of the state government being a major economic driver. These sectors contribute to a stable economic landscape, providing numerous opportunities for residents and businesses alike.</p>
+              <a href="#" class="secondary-cta-btn">Read more about <span class="current-location">Springfield</span>'s Economy</a>
+            </div>
+          </div>
+        </section>
+
+
+        <!------ Events Section ------->
+        <section id="events" class="">
+          <h2>Featured Events in <span class="current-location">Springfield</span></h2>            
+          <div class="events-container" id="eventsContainer">
+            <div class="event-card"><img src="../img/bookfair-3.jpg"
+                alt="Photo of a bookstore owner arranging books at his vendor booth at the outdoor bookfair">
+              <div class="event-card-content">
+                <h3>Autumn Book Fair</h3>
+                <p>Date: September 2, 2024</p>
+                <p>Venue: Capital Concourse</p><strong>Discover literary gems at the Autumn Book Fair.</strong><span> Meet
+                  authors, attend signings, and find rare books in a reader's paradise. </span><a href="#" class="secondary-cta-btn">Attend the Book Fair</a>
+              </div>
+            </div>
+            <div class="event-card"><img src="../img/universoul-circus-2.jpg"
+                alt="Closeup of the Ringmaster of Universoul Circus dressed in full regalia, smiling ">
+              <div class="event-card-content">
+                <h3>Universoul Circus</h3>
+                <p>Date: August 8, 2024</p>
+                <p>Venue: Midlands Park</p><strong>Experience the magic of Universoul Circus.</strong><span> A multicultural,
+                  global talent showcase that entertains and mesmerizes. </span><a href="#" class="secondary-cta-btn">Attend the Circus</a>
+              </div>
+            </div>
+            <div class="event-card"><img src="../img/st-pat-day-1.jpg"
+                alt="The Rotary Club of Springfield, cressed as leprechauns, walking in the ST. Patrick's Day parade">
+              <div class="event-card-content">
+                <h3>St. Patrick's Day Parade</h3>
+                <p>Date: March 17, 2024</p>
+                <p>Venue: Main Street, Downtown Springfield</p><strong>Celebrate Irish culture at the St. Patrick's Day
+                  Parade.</strong><span> Green-clad crowds enjoy music, dancing, and the luck of the Irish. </span><a href="#" class="secondary-cta-btn">Attend the Parade</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!------ ASIDE CONTENT AREA ------>
+    <div class="col-md-4">
+      <!-- Aside with Famous People List -->
+      <div class="row">
+        <aside>
+
+            <!-- Famous People From Here -->
+            <div class="aside-list famous-people">
+              <h2>Famous People Born in <span class="current-location">Springfield</span></h2>
+              <ol class="famous-people-list" id="famousPeopleList">
+                <!-- Dynamic content -->
+              </ol>
+            </div>
+
+            <div class="aside-list obscure-facts rounded-4">
+            <h2>Obscure Facts About <span class="current-location">Springfield</span></h2>
+            <ol class="obscure-facts-list" id="obscureFactsList">
+              <li>
+                <strong>Corn Dog Birthplace:</strong> Springfield is the birthplace of the corn dog, known locally as a "Cozy Dog."
+                <a class="secondary-cta-btn" href="https://example.com/springfield-cozy-dog" target="_blank">Learn more about the Cozy Dog<i class="bi bi-box-arrow-up-right"></i></a>
+            </li>
+            <li>
+                <strong>Underground Tunnels:</strong> The city has an extensive underground tunnel system originally used for transport and logistics.
+                <a class="secondary-cta-btn" href="https://example.com/springfield-tunnels" target="_blank">Discover the underground tunnels<i class="bi bi-box-arrow-up-right"></i></a>
+            </li>
+            <li>
+                <strong>Abraham Lincoln:</strong> Abraham Lincoln, the 16th President of the United States, significantly shaped the city's historical and cultural identity.
+                <a class="secondary-cta-btn" href="https://example.com/lincoln-springfield" target="_blank">Learn more about Abraham Lincoln<i class="bi bi-box-arrow-up-right"></i></a>
+            </li>
+            <li>
+                <strong>Vachel Lindsay:</strong> Poet Vachel Lindsay, known for his unique expression of early 20th-century American life, hails from Springfield.
+                <a class="secondary-cta-btn" href="https://example.com/vachel-lindsay-springfield" target="_blank">Discover Vachel Lindsay's Springfield<i class="bi bi-box-arrow-up-right"></i></a>
+            </li>
+            </ol>
+          </div>
+        </aside>
+      </div>      
+    </div>
+</div>
+</div>
+
+
+<!------ FOOTER CONTENT AREA ------>
+<div id="footer-container" class="container-fluid">
+  <div class="row">
+    <div class="col-12 g-0">
+      <footer>
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <ul>
+              <li><a target="_blank" href="https://www2.illinois.gov/">Official State of Illinois Website</a><i class="bi bi-box-arrow-up-right"></i></li>
+              <li><a target="_blank" href="https://www.enjoyillinois.com/">Enjoy Illinois (Tourism)</a><i class="bi bi-box-arrow-up-right"></i></li>
+              <li><a target="_blank" href="https://www.illinois.gov/services">Illinois Services</a><i class="bi bi-box-arrow-up-right"></i></li>
+            </ul>
+          </div>
+          
+          <div class="col-12 col-md-4">
+            <ul>
+              <li><a target="_blank" href="https://www.cyberdriveillinois.com/">Illinois Secretary of State</a><i class="bi bi-box-arrow-up-right"></i></li>
+              <li><a target="_blank" href="https://www.dph.illinois.gov/">Illinois Department of Public Health</a><i class="bi bi-box-arrow-up-right"></i></li>
+              <li><a target="_blank" href="https://www2.illinois.gov/idoc/">Illinois Department of Corrections</a><i class="bi bi-box-arrow-up-right"></i></li>
+            </ul>
+          </div>
+          
+          <div class="col-12 col-md-4">
+            <ul>
+              <li><a target="_blank" href="#">Facebook</a><i class="bi bi-box-arrow-up-right"></i></li>
+              <li><a target="_blank" href="#">Twitter</a><i class="bi bi-box-arrow-up-right"></i></li>
+              <li><a target="_blank" href="#">Instagram</a><i class="bi bi-box-arrow-up-right"></i></li>
+            </ul>
+          </div>
+          
+        </div>
+    
+        <p>&copy; 2024 State of Illinois. All Rights Reserved.</p>
+        <p>Contact us at <a href="mailto:info@example.com">info@example.com</a> or call us at (123) 456-7890.</p>
+      </footer>
+    </div>
+  </div>
+</div>
+    
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>  
+<!-- Custom JS -->
+<script src="/scripts/navigation.js"></script>
+<script src="/scripts/cities.js"></script>
+
+</body>
+</html>

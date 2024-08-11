@@ -1,0 +1,640 @@
+/* ------ CUSTOM VARIABLES ------ */
+
+:root {
+  /* Illinois state flag colors */
+  --red: #BE0A2f;
+  --white: #fff;
+  --blue: #002768;
+  --mediumblue: #003ba1;
+  --brown: #785A3C;
+  --beige: #ffefde;
+  --yellow: #FFE60F;
+  --green: #326932; /* adusted for color contrast*/
+  --darkgreen:   #224922;
+  --lightergreen: #e0ffe0c0;
+  --lightgreen: #afe3af;
+  --lightblue: #64B4FF;
+  --lighterblue: #b6dcff;
+  --lightestblue: #d9edff;
+  --lightgrey: #B4B4B4;
+  --darkgrey: #535353;
+}
+
+/* ------ TEMP UTILITY CLASSES FOR LAYOUT PLACEHOLDERS------ */
+
+.bg-white { background-color: #fff; }
+.bg-ltrgrey { background-color: #eee; }
+.bg-ltgrey { background-color: #ccc; }
+.bg-mdgrey { background-color: #666; }
+.bg-dkgrey { background-color: #333; }
+.bg-blk { background-color: #000; }
+
+/* ------ BASE STYLES AND TYPOGRAPHY ------ */
+
+html {
+  font-size: 100%; /* Relative to the 16px standard */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  /* font-family: 'Fauna One', serif; */
+}
+
+/* headings and display text */
+
+h1, h2, h3, h4, h5, h6 {
+  /* font-family: 'Cinzel', serif;
+  font-weight: bold; */
+}
+
+/* h1 { font-weight: normal;} */
+
+h2 { padding-bottom: 30px;}
+
+a:hover,
+a:active,
+a:focus { /* REVISIT FOR ACCESSIBILITY */
+  text-decoration: underline !important;
+  cursor: pointer !important;
+  outline: auto;
+}
+
+.cta-btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 20px 50px;
+  border-radius: 30px;
+  color: var(--blue);
+  font-weight: bold;
+  background-color: var(--lightblue);  
+}
+
+.cta-btn:hover,
+.cta-btn:active {
+  color: var(--blue);
+  background-color: var(--white);
+}
+
+.secondary-cta-btn {
+  display: inline-block;
+  margin: 10px 0px 30px 0px;
+  padding: 10px 20px;
+  border: 1px solid var(--blue);
+  border-radius: 20px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  background-color: var(--white);
+  min-width: 190px;
+  font-size: .85rem; 
+}
+
+.secondary-cta-btn:hover,
+.secondary-cta-btn:active {
+  color: var(--white);
+  background-color: var(--blue);
+}
+
+figcaption {
+  font-size: small;
+  line-height: 1;
+  font-style: italic;
+}
+
+/* bootstrap icons */
+
+.bi-house-fill {
+  color: var(--blue);
+  margin-right: 5px; 
+}
+
+.bi-star-fill {
+  color: var(--red);
+  margin-right: 5px; 
+}
+
+.bi-box-arrow-up-right {
+  padding-left: 20px;
+  font-size: .75rem; 
+  font-weight: bold;
+}
+
+/* layout container styles */
+
+header,
+nav,
+main,
+section,
+aside,
+footer {
+  box-sizing: border-box; /* width & height include content, padding, and border */
+  /* padding: 20px; */
+  width: 100%;
+}
+
+main, aside, footer {
+  padding: 30px;
+}
+
+section {
+  padding-top: 30px;
+}
+
+#main-container {
+  box-shadow: 0px 30px 30px 5px #999;
+}
+
+main {
+  background-color: #fff;
+  display: flex;
+  flex: 3;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: #000;
+  border-right: 1px solid var(--darkgrey);
+  padding-right: 45px;
+}
+
+
+/* ------ HEADER SECTION ------ */
+
+/* header login bar */
+
+.header-login-bar {
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; 
+}
+
+.title {
+  display: inline-block;
+  padding: 10px 10px 10px 75px;
+  background-color: transparent;
+  background-image: url(../img/Flag_of_Illinois.svg);
+  background-repeat: no-repeat;
+  background-position: -20px;
+  background-size: 30%;
+  font-family: 'Cinzel', serif;  
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.welcome-text {
+  margin-right: 10px;
+}
+/* refactor dropdown to use bootstrap */
+.profile-dropdown {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding-right: 30px;
+  cursor: pointer;  
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  z-index: 1;
+  min-width: 160px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+}
+
+.profile-dropdown:hover .dropdown-content,
+.profile-dropdown:focus .dropdown-content,
+.profile-dropdown:active .dropdown-content {
+  display: block;
+}
+
+.dropdown-item {
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+.dropdown-item:hover {
+  background-color: #f2f2f2;
+}
+
+.profile-picture {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+/*------ main navigation ------*/
+
+nav {
+  position: relative;
+  padding: 0;
+  border-top: 1px solid var(--darkgrey);
+  background: var(--blue);
+  color: var(--white);
+  font-weight: bold;  
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ccc;
+  padding: 20px;
+  display: inline-block;
+  width: 100%;
+}
+
+nav a:hover {
+  background: #fff;
+  color: #000;
+}
+
+nav a:focus {
+  background: #fff;
+  color: #000;
+  outline: none;
+}
+
+nav a:focus+ul {
+  display: block;
+}
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background: #666;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+ 
+nav ul li:hover>ul {
+  display: block;
+}
+
+/*------ header hero ------*/
+
+#illinois .hero-graphic {
+  background-image: url('../img/illinois-charles-mound-scenic-illinois.jpg');
+}
+
+#events-and-todo .hero-graphic {
+  background-image: url('/img/music-festival-1.jpg');
+}
+
+.hero-graphic {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;  
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-text {
+  max-width: 900px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 3em;
+  backdrop-filter: blur(10px);
+}
+
+.hero-soundbite {
+  font-size: larger;
+}
+
+.hero-flag {
+  float: left;
+  margin-right: 15px;
+}
+
+.hero-flag img {
+  height: 10vh;
+}
+
+/*------ breadcrumb nav ------*/
+
+.breadcrumb-nav {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  background-color: #e9ecef;
+  border-bottom: 1px solid var(--darkgrey);
+}
+
+.breadcrumb-nav ol {
+  margin-bottom: 0;
+}
+
+.breadcrumb-nav ol {
+  margin-bottom: 0;
+}
+
+.breadcrumb-item.active {
+  color: black;
+}
+
+/*------ location data table ------*/
+
+.location-data-table {
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+tr:nth-child(even) {
+  background-color: #ccc;
+}
+
+tr:nth-child(odd) {
+  background-color: #FFF;
+}
+
+tfoot td {
+  background-color: var(--lightgreen);
+}
+
+th,
+td {
+  border: 1px solid #fff;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--green);
+  color: #fff;
+}
+
+thead th {
+  background-color: var(--darkgreen);
+  color: #fff;
+}
+
+caption {
+  font-size: .90rem;
+  font-weight: bold;
+}
+
+
+/*------ content cards and event cards ------*/
+
+.content-card {
+  /* border: 1px solid black; */
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.content-card img {
+  width: 100%;
+  }
+  
+  .filters {
+  margin-bottom: 20px;
+}
+
+.card-container,
+.events-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  /* padding: 20px; */
+  justify-content: space-around;
+}
+
+.event-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.event-card .secondary-cta-btn {
+  display: block;
+  margin-top: 20px;
+}
+
+.card,
+.event-card {
+  border: 1px solid #000;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card img,
+.event-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-content,
+.event-card-content {
+  padding: 15px;
+}
+
+.card-content,
+.event-card-content p {
+  margin-bottom: 0;
+}
+
+.headline-image img {
+  width: 100%;
+  height: auto;
+}
+
+#featured-small-town {
+  background-color: antiquewhite;
+  border: 1px solid #666;
+  border-radius: 10px;
+}
+
+/* ------ ASIDE ------ */
+
+.aside-list {
+  list-style: none;
+  padding: 30px 15px;
+  font-weight: bold;
+  /* border-radius: 15px; */
+  /* background-color: var(--lightestblue); */
+}
+
+.famous-people-list {
+  list-style: none;
+  padding: 20px 0px;
+  /* background-color: var(--lightestblue); */
+}
+
+.famous-people-list li {
+  display: flex;
+  align-items: center;
+}
+
+.famous-people-list a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  border-bottom: var(--mediumblue) solid 1px;
+  color: black;
+  font-size: .85rem;
+  width: 100%;
+}
+
+.obscure-facts ol {
+  padding-left: 1rem;
+}
+
+.obscure-facts a {
+  width: 100%;
+}
+
+.famous-people-list a:hover,
+.famous-people-list a:active {
+  background-color: var(--blue);
+  color: var(--white)
+}
+
+.famous-people-list a:hover .bi-star-fill,
+.famous-people-list a:active .bi-star-fill  {
+  color: var(--white); 
+}
+
+.aside-list.obscure-facts {
+  background-color: var(--lighterblue); 
+}
+
+aside form {
+  background-color: var(--lighterblue);
+  padding: 20px;
+  margin-bottom: 50px;
+ }
+ 
+ aside form input, 
+ aside form textarea {
+  margin-bottom: 30px;
+ }
+ 
+ textarea,
+input {
+  width: 100%;
+}
+
+.citations-and-resources-list p {
+  font-weight: normal;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+
+/* ------ FOOTER SECTION ------ */
+
+footer {
+  background: var(--darkgrey);
+  text-align: center;
+  align-self: flex-end;
+  color: var(--white);
+}
+
+footer ul {
+  text-align: left;
+}
+
+footer li {
+  list-style: none;
+}
+
+footer a {
+  color: white;
+}
+  
+
+/* ------------ RESPONSIVE ADJUSTMENTS ------------ */
+
+/* Adjust base font size for smaller devices */
+@media (max-width: 768px) {
+  html {
+    font-size: 90%; /* Reduce base font size on small devices */
+  }
+
+  .title {
+    background-position: -20px;
+    background-size: 50%;
+    line-height: 1;
+  }
+
+  main {
+    border-right: none;
+    padding-right: 30px;
+  }
+
+  .hero-text {
+    padding: 1em;
+  }
+}
+
+
+/* Responsive Typography Settings 
+
+-- clamp(MIN, VAL, MAX) -- 
+
+  * MIN: The minimum value that the function can return. This value acts as a lower bound.
+
+  * VAL: The preferred value, which often uses a relative unit like vw (viewport width), vh (viewport height), or a percentage. This value is allowed to "flex" within the defined minimum and maximum range.
+
+  * MAX: The maximum value that the function can return. This value acts as an upper bound.
+
+*/
+
+/* Typography Scale */
+.title, .display-2, .display-3, .display-4 {
+  font-family: 'Cinzel', serif;
+}
+
+.title {
+  font-size: clamp(1.25rem, 4vw + 1rem, 2rem); /* Dynamically scales between 1.25rem and 2rem */
+}
+
+h1 {
+  font-size: clamp(1.15rem, 3.5vw + 1rem, 2.25rem); /* Dynamically scales between 1.15rem and 2.25rem */
+}
+
+h2, .display-2 {
+  font-size: clamp(1.1rem, 3vw + 1rem, 1.75rem); /* Dynamically scales between 1.1rem and 1.5rem */
+}
+
+h3, .display-3 {
+  font-size: clamp(1rem, 2.5vw + 1rem, 1.5rem); /* Dynamically scales between 1rem and 1.25rem */
+}
+
+h4, .display-4 {
+  font-size: clamp(1rem, 2vw + 1rem, 1.1rem); /* Dynamically scales between 1rem and 1.25rem */
+}

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Events in Illinois - "Location Nickname"</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Fauna+One:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/styles/styles.css" />
+
+</head>
+
+<body id="events-and-todo">
+  <!------ HEADER AREA ------>
+  <div id="header-container" class="container-fluid bg-ltgrey">
+    <div class="row">
+      <div class="col-12 g-0">
+        <header>
+
+          <!------ LOGO AND LOGIIN BAR ------>
+          <div class="header-login-bar">
+            <div class="justify-left">
+              <span class="title">The State of Illinois</span>
+            </div>
+            <div class="user-info justify-right">
+              <span class="welcome-text">Welcome Back, John Doe!</span>
+              <div class="profile-dropdown">
+                <img src="../img/user.png" alt="Profile" class="profile-picture">
+                <span>&#9660;</span>
+                <div class="dropdown-content">
+                  <a href="#" class="dropdown-item">Profile</a>
+                  <a href="#" class="dropdown-item">Settings</a>
+                  <a href="#" class="dropdown-item">Logout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!------ MAIN NAVIGATION ------>
+          <div id="nav-container" class="container-fluid">
+            <div class="row">
+              <div class="col-12 g-0">
+                <nav class="navbar navbar-expand-md navbar-light bg-white">
+                  <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                      aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-left" id="navbarNavDropdown">
+                      <ul class="navbar-nav">
+                      </ul>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+
+
+          <!------ HERO IMAGE WITH TEXT OVERLAY ------>
+          <div id="hero-section" class="hero-graphic text-left text-white">
+            <div class="hero-text col-8">
+              <h1 id="cityName" class="hero-heading">Explore Featured Events and Things to do in Illinois</h1>
+              <h2 id="nickname">Discover Your Next Adventure!</h2>
+              <p id="hero-soundbite">Experience the offerings of Illinois, where every city offers a new adventure. From
+                Chicago's iconic skyline to Springfield's historic charm, immerse yourself in a state rich with culture,
+                history, and nature preserves. Enjoy thrilling attractions, serene landscapes, and culinary delights.
+              </p><a src="#" class="cta-btn bg-light text-black">Start your journey here!</a>
+            </div>
+          </div>
+
+        </header>
+      </div>
+    </div>
+  </div>
+
+
+  <!------ BREADCRUMB NAVIGATION ------>
+  <div class="breadcrumb-container container-fluid">
+    <div class="row">
+      <div class="col-12 g-0">
+        <div class="breadcrumb-nav bg-white"> <!-- REFACTOR -->
+          <div aria-label="breadcrumb">
+            <ol class="breadcrumb p-3">
+              <li class="breadcrumb-item">
+                <a class="link-body-emphasis fw-bold" href="">
+                  <span class=""><i class="bi bi-house-fill"></i> The State of Illinois</span>
+                </a>
+              </li>
+              <li class="breadcrumb-item fw-semibold active" aria-current="page">
+                Events and Things To Do!
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!------ MAIN CONTENT AREA ------>
+  <div id="main-container" class="container-xxl">
+    <div class="row">
+      <div class="col-md-8">
+        <main>
+
+          <!------ Events ------>
+          <section id="events" class="">
+            <h2>Featured Events in Illinois</h2>
+            <div class="filters">
+              <label for="cityFilter">Filter by City:</label>
+              <select id="cityFilter">
+                <option value="all">All</option>
+                <option value="chicago">chicago</option>
+                <option value="aurora">aurora</option>
+                <option value="naperville">naperville</option>
+                <option value="springfield">springfield</option>
+                <option value="rockford">rockford</option>
+                <option value="waukegan">waukegan</option>
+              </select>
+            </div>
+
+            <div class="events-container" id="eventsContainer">
+              <!-- build event cards dynamically here -->
+            </div>
+          </section>
+
+        </main>
+      </div>
+
+
+      <!------ ASIDE CONTENT AREA ------>
+
+      <div class="col-md-4">
+        <!-- Aside with Famous People List -->
+        <div class="row">
+          <aside>
+
+            <!------ Submit an Event ------>
+
+            <!-- Error Display Container -->
+            <div id="formErrors" class="alert alert-danger" role="alert" style="display: none;"></div>
+
+            <form id="contactForm" novalidate> <!-- novalidate - enable addition of custom validation -->
+              <fieldset>
+                <legend>Submit an Event!</legend>
+
+                <div class="form-group">
+                  <label for="firstName">First Name:</label>
+                  <input type="text" class="form-control" id="firstName" name="firstName" aria-required="true"
+                    placeholder="John" required>
+                  <div class="invalid-feedback">
+                    Your First Name is required.
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="lastName">Last Name:</label>
+                  <input type="text" class="form-control" id="lastName" name="lastName" aria-required="true"
+                    placeholder="Doe" required>
+                  <div class="invalid-feedback">
+                    Your Last Name is required.
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" class="form-control" id="email" name="email" aria-required="true"
+                    placeholder="john.doe@example.com" required>
+                  <div class="invalid-feedback">
+                    Your Email is required and must be formatted correctly.
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="confirmEmail">Confirm Email:</label>
+                  <input type="email" class="form-control" id="confirmEmail" name="confirmEmail" aria-required="true"
+                    placeholder="Confirm your email" required>
+                  <div class="invalid-feedback">
+                    OOPS! Your email addresses don't match.
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="myEventDescription">Describe Your Event:</label>
+                  <textarea class="form-control" id="myEventDescription" name="myEventDescription" rows="4"
+                    placeholder="Add event details here" required></textarea>
+                  <div class="invalid-feedback">
+                    Please provide detailed information about your event so we can serve you better.
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </fieldset>
+            </form>
+
+            <!-- User Input Data Container -->
+            <h3>Information you are submitting:</h3>
+            <div id="submittedData"></div>
+
+          </aside>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!------ FOOTER CONTENT AREA ------>
+  <div id="footer-container" class="container-fluid">
+    <div class="row">
+      <div class="col-12 g-0">
+        <footer>
+          <div class="row">
+            <div class="col-12 col-md-4">
+              <ul>
+                <li><a target="_blank" href="https://www2.illinois.gov/">Official State of Illinois Website</a><i
+                    class="bi bi-box-arrow-up-right"></i></li>
+                <li><a target="_blank" href="https://www.enjoyillinois.com/">Enjoy Illinois (Tourism)</a><i
+                    class="bi bi-box-arrow-up-right"></i></li>
+                <li><a target="_blank" href="https://www.illinois.gov/services">Illinois Services</a><i
+                    class="bi bi-box-arrow-up-right"></i></li>
+              </ul>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <ul>
+                <li><a target="_blank" href="https://www.cyberdriveillinois.com/">Illinois Secretary of State</a><i
+                    class="bi bi-box-arrow-up-right"></i></li>
+                <li><a target="_blank" href="https://www.dph.illinois.gov/">Illinois Department of Public Health</a><i
+                    class="bi bi-box-arrow-up-right"></i></li>
+                <li><a target="_blank" href="https://www2.illinois.gov/idoc/">Illinois Department of Corrections</a><i
+                    class="bi bi-box-arrow-up-right"></i></li>
+              </ul>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <ul>
+                <li><a target="_blank" href="#">Facebook</a><i
+                    class="bi bi-box-arrow-up-right"></i></li>
+                <li><a target="_blank" href="https://twitter.com/illinoisgov">Twitter</a><i
+                    class="bi bi-box-arrow-up-right"></i></li>
+                <li><a target="_blank" href="https://www.instagram.com/enjoyillinois/">Instagram</a><i
+                    class="bi bi-box-arrow-up-right"></i></li>
+              </ul>
+            </div>
+
+          </div>
+
+          <p>&copy; 2024 State of Illinois. All Rights Reserved.</p>
+          <p>Contact us at <a href="mailto:info@example.com">info@example.com</a> or call us at (123) 456-7890.</p>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <script src="/scripts/navigation.js"></script>
+  <script src="/scripts/events.js"></script>
+  
+  <script>
+    // RUDIMENTRAY FORM VALIDATION AND LOCAL STORAGE DATA DISPLAY
+    // DEBUG: form doesn't work as expected when moved to external file.
+    function validateForm() {
+
+      // remove any old errors that are present
+      document.getElementById('formErrors').innerHTML = '';
+      let errors = [];
+
+      // Check to see if the first name field is empty
+      // if so add an error class. if not, remove any error class that amy be present
+      // repeat this for each of the required fields
+      if (!document.getElementById('firstName').value) {
+        errors.push("First Name is required.");
+        document.getElementById('firstName').classList.add('is-invalid');
+      } else {
+        document.getElementById('firstName').classList.remove('is-invalid');
+      }
+
+      // last name
+      if (!document.getElementById('lastName').value) {
+        errors.push("Last Name is required.");
+        document.getElementById('lastName').classList.add('is-invalid');
+      } else {
+        document.getElementById('lastName').classList.remove('is-invalid');
+      }
+
+      // email (check for emptiness, formatting, and text matching)
+
+      // pattern to validate for formatting
+      // simplified dom elements for readability of this section
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const emailField = document.getElementById('email');
+      const confirmEmailField = document.getElementById('confirmEmail');
+      const emailValue = emailField.value;
+
+      // if the field is empty, display an error
+      if (!emailField.value) {
+        errors.push("Last Name is required.");
+        emailField.classList.add('is-invalid');
+      } else {
+        emailField.classList.remove('is-invalid');
+      }
+
+      if (!confirmEmailField.value) {
+        errors.push("You have to confirm your email.");
+        confirmEmailField.classList.add('is-invalid');
+      } else {
+        confirmEmailField.classList.remove('is-invalid');
+      }
+
+      // if html5 validity check fails or the email pattern test fails, display an error
+      if (!emailField.checkValidity() || !emailPattern.test(emailValue)) {
+        errors.push("email is invalid");
+        emailField.classList.add('is-invalid');
+      } else {
+        emailField.classList.remove('is-invalid');
+      }
+
+      // if both email fields don't match, display an error
+      if (email.value !== confirmEmail.value) {
+        confirmEmail.setCustomValidity("");
+        confirmEmail.classList.add('is-invalid');
+      }
+
+      // event details
+      if (!document.getElementById('myEventDescription').value) {
+        errors.push("Event details are required.");
+        document.getElementById('myEventDescription').classList.add('is-invalid');
+      } else {
+        document.getElementById('myEventDescription').classList.remove('is-invalid');
+      }
+
+      // if there are errors, display them in the error container
+      if (errors.length > 0) {
+        document.getElementById('formErrors').innerHTML = errors.join('<br>');
+        return false; // Prevent form from submitting
+      }
+
+      // save the user input data to local storage if there are no errors
+      localStorage.setItem('contactFormData', JSON.stringify({
+        firstName: document.getElementById('firstName').value,
+        lastName: document.getElementById('lastName').value,
+        email: document.getElementById('email').value,
+        confirmEmail: document.getElementById('confirmEmail').value,
+        myEventDescription: document.getElementById('myEventDescription').value
+      }));
+
+      displayFormData();
+      return false; // Prevent form submission for demonstration
+    }
+
+    // display the information that the user input into the form
+    function displayFormData() {
+      const storedData = JSON.parse(localStorage.getItem('contactFormData'));
+      if (storedData) {
+        document.getElementById('submittedData').innerHTML = `
+          <p>First Name: ${storedData.firstName}</p>
+          <p>Last Name: ${storedData.lastName}</p>
+          <p>Email: ${storedData.email}</p>
+          <p>Event Details: ${storedData.myEventDescription}</p>
+        `;
+      }
+    }
+
+    // validate the form when the user hits submit
+    document.getElementById('contactForm').onsubmit = validateForm;
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,349 @@
+<!-- Make sure the browser reads the code as HTML5 -->
+<!DOCTYPE html>
+<!-- Set the primary language of this html document as US English -->
+<html lang="en-US">
+
+<head>
+<!-- Use character encoding "UTF-8" - a variable width standard that translates the Unicode characters into 8-bit -->
+<meta charset="utf-8">
+<!-- Make sure IE uses the latest render engine-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--Provide a description of your wepage for SEO and to display in search results-->
+<meta name="description" content="">
+<!-- Set the width of the viewport to the width of the device's screen to assist with responsive design; and set the initial zoom level when the page first loads to 100%-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Naperville, Illinois - "The Golden City"</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Fauna+One:wght@400;700&display=swap">
+<link rel="stylesheet" href="../styles/styles.css">
+
+<style>
+  /* PAGE LOAD STYLES */
+</style>
+
+</head>
+
+<body id="naperville">
+  <!------ HEADER AREA ------>
+  <div id="header-container" class="container-fluid bg-white">
+    <div class="row">
+      <div class="col-12 g-0">
+        <header>
+
+        <!------ LOGO AND LOGIIN BAR ------>
+        <div class="header-login-bar">
+            <div class="justify-left">
+              <span class="title">The State of Illinois</span>
+            </div>
+            <div class="user-info justify-right">
+              <span class="welcome-text">Welcome Back, John Doe!</span>
+              <div class="profile-dropdown">
+                <img src="../img/user.png" alt="Profile" class="profile-picture">
+                <span>&#9660;</span>
+                <div class="dropdown-content">
+                  <a href="#" class="dropdown-item">Profile</a>
+                  <a href="#" class="dropdown-item">Settings</a>
+                  <a href="#" class="dropdown-item">Logout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!------ MAIN NAVIGATION ------>
+          <div id="nav-container" class="container-fluid">
+            <div class="row">
+              <div class="col-12 g-0">
+                  <nav class="navbar navbar-expand-md navbar-light bg-white">
+                    <div class="container-fluid">
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse justify-content-left" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                          <!-- <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="springfield.html">The State Capital</a>
+                          </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="/top-10-cities/index.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Top 10 Cities
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                              <li><a class="dropdown-item" href="/top-10-cities/chicago.html" class="click-me">1. Chicago</a></li>
+                              <li><a class="dropdown-item inactive-link" href="#">2. Aurora</a></li>
+                              <li><a class="dropdown-item inactive-link" href="/top-10-cities/placeholder.html">3. Joliet</a></li>
+                              <li><a class="dropdown-item" href="/top-10-cities/naperville.html" class="click-me">4. Naperville</a></li>
+                              <li><a class="dropdown-item inactive-link" href="/top-10-cities/placeholder.html">5. Rockford</a></li>
+                              <li><a class="dropdown-item inactive-link" href="/top-10-cities/placeholder.html">6. Elgin</a></li>
+                              <li><a class="dropdown-item" href="/top-10-cities/springfield.html" class="click-me">7. Springfield</a></li>
+                              <li><a class="dropdown-item inactive-link" href="/top-10-cities/placeholder.html">8. Peoria</a></li>
+                              <li><a class="dropdown-item inactive-link" href="/top-10-cities/placeholder.html">9. Waukegan</a></li>
+                              <li><a class="dropdown-item inactive-link" href="/top-10-cities/placeholder.html">10. Champaign</a></li>    
+                            </ul>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="/events.html">Events and Things To Do!</a>
+                          </li> -->
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+              </div>  
+            </div>
+          </div>
+
+          <!------ HERO IMAGE WITH TEXT OVERLAY ------>
+          <div id="hero-section" class="hero-graphic text-left bg-dark text-white">
+            <div class="hero-text rounded-4">
+              <div class="hero-flag"><img src="/img/us-ilnap.gif" alt="Flag of Illinois" /></div>
+              <h1 id="cityName" class="hero-heading">City Name</h1>
+              <h2 id="nickname">Nickname</h2>
+              <p id="hero-soundbite"></p><a src="#" class="cta-btn">Plan a Vist</a>
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+  </div>
+
+
+<!------ BREADCRUMB NAVIGATION ------>
+<div class="breadcrumb-container container-fluid">
+  <div class="row">
+    <div class="col-12 g-0">
+      <div class="breadcrumb-nav bg-white"> <!-- REFACTOR -->
+        <!-- <div aria-label="breadcrumb"> -->
+          <ol class="breadcrumb p-3">
+            <li class="breadcrumb-item">
+              <a class="link-body-emphasis fw-bold" href="/index.html">
+                <span class=""><i class="bi bi-house-fill"></i> The State of Illinois</span>
+              </a>
+            </li>
+            <li class="breadcrumb-item fw-semibold active" aria-current="page">
+              Top 10 Cities - Naperville
+            </li>
+          </ol>
+        <!-- </div> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!------ MAIN CONTENT AREA ------>
+<div id="main-container"  class="container-xxl">
+  <div class="row">
+    <div class="col-md-8">
+      <main>
+
+        <!------ Data Table ------->
+        <section id="location-data">
+          <h2>How Naperville Compares to Illinois</h2>
+          <!-- Demographics Comparison Table (responsive table) -->
+          <div class="row location-data-table" id="cityDataTable">
+            <div class="col-md-12">
+              <table aria-describedby="tableInfo">
+                  <caption id="tableCaption">A comparison table of the difference in various demographics between Naperville and the rest of Illinois</caption>
+                  <p id="tableInfo" hidden>The demographics column contains the following data categories: population, date of incorporation, region, classification, median household income, median rent, and median home value. The footer contains the overall cost of living difference between Naperville and the rest of Illinois.</p>
+                <thead>
+                  <tr>
+                    <th scope="col">Demograpics</th>
+                    <th scope="col">Naperville</th>
+                    <th scope="col">Comparison to State</th>
+                  </tr>
+                </thead>
+                <tbody id="cityDataBody">
+                  <!-- build table cells with dynamic data -->
+                </tbody>
+                <tfoot><td colspan="3"><strong>Cost of Living Difference:</strong> Naperville is 15.4% higher than the rest of Illinois.</td></tfoot>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!------ History Section ------->
+        <section id="history" class="content-card">
+          <div class="row">
+            <h2>History of Naperville</h2>
+            <div class="col-12 col-md-6">
+              <figure><div class="headline-image"></div>
+                <img src="/img/Joseph_Naper_Photogragh.jpg" alt="Photograph Naper Settlement Museum Photo Collection">
+                <figcaption>Photograph Naper Settlement Museum Photo Collection</figcaption>
+              </figure>
+  
+            </div>
+            <div class="col-12 col-md-6">
+              
+            <p><strong>Naperville's origins are deeply tied to Native American heritage,</strong> with the land initially inhabited by the Potawatomi tribe before the arrival of Joseph Naper and his group of settlers from Ohio in 1831. This early settlement, known as Naper's Settlement, quickly grew, establishing Naperville as a key community in Illinois. The city's historical significance is preserved at Naper Settlement, an outdoor museum showcasing the Martin-Mitchell Mansion, a beacon of Victorian-era architecture listed on the National Register of Historic Places. </p>
+            <a href="#"  class="secondary-cta-btn">Read more about Naperville's History</a>
+            </div>
+          </div>
+        </section>
+
+        <!------ Culture Section ------->
+        <section id="culture" class="content-card">
+          <div class="row">
+            <h2>Naperville Culture</h2>
+            <div class="col-12 col-md-6">
+              <figure>
+                <img src="/img/Pine_Craig_(5978097719).jpg" alt="Exterior of the Martin-Mitchell Mansion within the Naper Settlement museum, view from Aurora Avenue, Naperville, Illinois, USA.">
+                <figcaption>Martin-Mitchell Mansion (Pine Craig) in Naperville (1883). George Martin, Jr. founded the Naperville Tile and Brick Works, which sold over a million tiles. Teemu008 from Palatine, Illinois, CC BY-SA 2.0 via Wikimedia Commons</figcaption>
+              </figure>
+            </div>
+            <div class="col-12 col-md-6">
+              <p><strong>Naperville's culture is a blend of historic charm and modern vibrancy.</strong> The Martin Mitchell Mansion, originally called Pine Craig by its first occupants, stands as a notable historical dwelling. Constructed with supplies sourced from local Naperville enterprises and stone quarried from the DuPage River, this 12-room mansion embodies the area's rich heritage. George Martin II, whose father emigrated from Scotland, amassed his wealth by skillfully utilizing the local resources available to him </p>
+              <a href="#"  class="secondary-cta-btn">Read more about Naperville's Culture</a>
+            </div>
+          </div>
+        </section>
+        
+        <!------ Economy Section ------->
+        <section id="economy" class="content-card">
+          <div class="row">
+            <h2>The Naperville Economy</h2>
+            <div class="col-12 col-md-6">
+              <figure>
+                <img src="/img/512px-Argonne_aerial.jpg" alt="Aerial view of Argonne National aLbs IL.">
+                <figcaption>John Hill for Argonne National Laboratory, CC BY-SA 2.0 via Wikimedia Commons</figcaption>
+              </figure>
+            </div>
+            <div class="col-12 col-md-6">
+              <p><strong>The economic landscape of Naperville has evolved significantly from its early days. </strong>The city's proximity to Chicago and the establishment of major research and development centers like Argonne National Laboratory and Fermi National Accelerator Laboratory have made it a hub for innovation. Naperville's economy is bolstered by a diverse mix of businesses, from high technology firms to retail, contributing to its status as one of the most affluent cities in the Midwest. The city's commitment to sustainable growth and community development continues to attract investment and talent.</p>
+              <a href="#"  class="secondary-cta-btn">Read more about Naperville's Economy</a>
+            </div>
+          </div>
+        </section>
+
+
+        <!------ Events Section ------->
+        <section id="events" class="">
+          <h2>Featured Events in Naperville</h2>
+          <div class="events-container" id="eventsContainer">
+            <div class="event-card"><img src="../img/farmers-market-7.jpg"
+                alt="Young African-American woman, smiling while standing in front of her produce booth at the Farmer's Market">
+              <div class="event-card-content">
+                <h3>Farmer's Market</h3>
+                <p>Date: April 7, 2024</p>
+                <p>Venue: University Stadium Parking Lot</p><strong>Savor the bounty at the Farmer's Market.</strong><span> Fresh,
+                  local produce and handmade goods in a vibrant community gathering. </span><a href="#" class="secondary-cta-btn">Attend Farmer's Market</a>
+              </div>
+            </div>
+            <div class="event-card"><img src="../img/resturant-week-1.jpg"
+                alt="Restaurant photo of a main course of gourmet burgers and fries with a beer.">
+              <div class="event-card-content">
+                <h3>Restaurant Week!</h3>
+                <p>Date: June 11, 2024</p>
+                <p>Venue: </p><strong>Celebrate Naperville's culinary scene during Restaurant Week!</strong><span> Exclusive menus
+                  and discounts at the city's finest eateries. </span><a href="#" class="secondary-cta-btn">Attend Restaurant Week!</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+
+    <!------ ASIDE CONTENT AREA ------>
+    <div class="col-md-4">
+      <!-- Aside with Famous People List -->
+      <div class="row">
+        <aside>
+
+            <!-- Famous People From Here -->
+            <div class="aside-list famous-people">
+              <h2>Famous People Born in Naperville</h2>
+              <ol class="famous-people-list" id="famousPeopleList">
+                <!-- Dynamic content -->
+              </ol>
+            </div>
+
+            <div class="aside-list obscure-facts rounded-4">
+              <h2>Obscure Facts About Naperville</h2>
+              <ol class="obscure-facts-list" id="obscureFactsList">
+
+                <li>
+                  <strong>Naperville's First Hotel:</strong> The Pre-Emption House, established in 1834, was DuPage County's first hotel.
+                  <a class="secondary-cta-btn" href="https://example.com/" target="_blank">Learn more about the hotel<i class="bi bi-box-arrow-up-right"></i></a>
+                </li>
+                <li>
+                  <strong>Railroad History:</strong> Naperville was initially bypassed by the Galena & Chicago Union Railroad in favor of Wheaton but later became a key stop on the Chicago, Burlington & Quincy Railroad.
+                  <a class="secondary-cta-btn" href="https://example.com/" target="_blank">Visit the Railroad Museum<i class="bi bi-box-arrow-up-right"></i></a>
+                </li>
+                <li>
+                  <strong>Educational Milestone:</strong> In 1870, North Central College relocated to Naperville, significantly contributing to the city's educational landscape.
+                  <a class="secondary-cta-btn" href="https://example.com/" target="_blank">Central College Website<i class="bi bi-box-arrow-up-right"></i></a>
+                </li>
+                <li>
+                  <strong>Historic Preservation:</strong> The Martin Mitchell Mansion, part of Naper Settlement, is a beautifully restored Victorian mansion listed on the National Register of Historic Places.
+                  <a class="secondary-cta-btn" href="https://example.com/" target="_blank">Visit this historic mansion<i class="bi bi-box-arrow-up-right"></i></a>
+                </li>
+                <li>
+                  <strong>George Martin II:</strong> Notable for his significant contributions to Naperville's development, including the establishment of the Martin Mitchell Mansion.
+                  <a class="secondary-cta-btn" href="https://example.com/" target="_blank">Biography of Geroge Martin II<i class="bi bi-box-arrow-up-right"></i></a>
+                </li>
+                <li>
+                  <strong>Joseph Naper:</strong> Founder of Naperville, whose vision and leadership were instrumental in the city's early growth.
+                  <a class="secondary-cta-btn" href="https://example.com/" target="_blank">Read about Joseph Naper<i class="bi bi-box-arrow-up-right"></i></a>
+                </li>
+              </ol>
+            </div>
+        </aside>
+      </div>      
+    </div>
+</div>
+</div>
+
+
+<!------ FOOTER CONTENT AREA ------>
+<div id="footer-container" class="container-fluid">
+  <div class="row">
+    <div class="col-12 g-0">
+      <footer>
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <ul>
+              <li><a target="_blank" href="https://www2.illinois.gov/">Official State of Illinois Website</a><i class="bi bi-box-arrow-up-right"></i></li>
+              <li><a target="_blank" href="https://www.enjoyillinois.com/">Enjoy Illinois (Tourism)</a><i class="bi bi-box-arrow-up-right"></i></li>
+              <li><a target="_blank" href="https://www.illinois.gov/services">Illinois Services</a><i class="bi bi-box-arrow-up-right"></i></li>
+            </ul>
+          </div>
+          
+          <div class="col-12 col-md-4">
+            <ul>
+              <li><a target="_blank" href="https://www.cyberdriveillinois.com/">Illinois Secretary of State</a><i class="bi bi-box-arrow-up-right"></i></li>
+              <li><a target="_blank" href="https://www.dph.illinois.gov/">Illinois Department of Public Health</a><i class="bi bi-box-arrow-up-right"></i></li>
+              <li><a target="_blank" href="https://www2.illinois.gov/idoc/">Illinois Department of Corrections</a><i class="bi bi-box-arrow-up-right"></i></li>
+            </ul>
+          </div>
+          
+          <div class="col-12 col-md-4">
+            <ul>
+              <li><a target="_blank" href="#">Facebook</a><i class="bi bi-box-arrow-up-right"></i></li>
+              <li><a target="_blank" href="#">Twitter</a><i class="bi bi-box-arrow-up-right"></i></li>
+              <li><a target="_blank" href="#">Instagram</a><i class="bi bi-box-arrow-up-right"></i></li>
+            </ul>
+          </div>
+          
+        </div>
+    
+        <p>&copy; 2024 State of Illinois. All Rights Reserved.</p>
+        <p>Contact us at <a href="mailto:info@example.com">info@example.com</a> or call us at (123) 456-7890.</p>
+      </footer>
+    </div>
+  </div>
+</div>
+    
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>  
+<!-- Custom JS -->
+<script src="/scripts/navigation.js"></script>
+<script src="/scripts/cities.js"></script>
+
+</body>
+</html>
